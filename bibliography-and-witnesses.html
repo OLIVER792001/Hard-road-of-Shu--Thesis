@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Genesis of the Shu Road · Witnesses, Bibliography &amp; Thesis Outline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f1e6; --paper-deep:#efe8d8; --ink:#2b2118; --ink-light:#6b5d4a;
+    --cinnabar:#b83e2f; --cinnabar-deep:#8f2f23; --gold:#9a7b3f; --line:#d8cdb4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:'Crimson Text','Noto Serif SC',Georgia,serif;
+    line-height:1.65; font-size:16px;
+  }
+  .zh{font-family:'Noto Serif SC',serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+
+  /* ---------- header ---------- */
+  header{
+    background:linear-gradient(180deg,var(--paper-deep),var(--paper));
+    border-bottom:3px double var(--cinnabar);
+    padding:64px 0 40px; text-align:center; position:relative;
+  }
+  .seal{
+    display:inline-block; background:var(--cinnabar); color:#f6f1e6;
+    font-family:'Noto Serif SC',serif; font-weight:900; font-size:20px;
+    padding:10px 12px; border-radius:4px; line-height:1.25; letter-spacing:2px;
+    margin-bottom:20px; writing-mode:vertical-rl;
+  }
+  header h1{font-size:42px;font-weight:600;letter-spacing:.5px}
+  header .sub-en{font-size:19px;color:var(--ink-light);margin-top:8px}
+  header .note{font-size:13.5px;color:var(--ink-light);margin-top:22px;max-width:820px;margin-left:auto;margin-right:auto;font-style:italic}
+
+  /* ---------- part title ---------- */
+  .part{padding:56px 0 8px;text-align:center}
+  .part .num{font-size:13px;letter-spacing:4px;color:var(--cinnabar);text-transform:uppercase}
+  .part h2{font-size:30px;margin-top:6px;font-weight:600}
+  .part .rule{width:120px;height:2px;background:var(--cinnabar);margin:18px auto 0}
+  .toc-note{text-align:center;font-size:14px;color:var(--ink-light);max-width:820px;margin:20px auto 4px}
+
+  /* ---------- compact bibliography ---------- */
+  .spread{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:#fffdf7;margin:16px 0;box-shadow:0 2px 6px rgba(43,33,24,.06)}
+  .spread .left{padding:16px 24px 18px;border-right:1px dashed var(--line);font-family:'Noto Serif SC',serif;font-size:15px}
+  .spread .right{padding:16px 24px 18px;background:var(--paper);font-size:14.5px}
+  .pinyin{font-style:italic;color:var(--ink-light);font-size:13.5px}
+  .yr{color:var(--cinnabar);font-weight:600}
+  .reflink{
+    display:block;margin-top:11px;font-size:12.5px;font-style:italic;
+    color:var(--cinnabar-deep);text-decoration:none;letter-spacing:.2px;
+  }
+  .reflink:hover{text-decoration:underline}
+  .reflink::before{content:"\2197  ";font-style:normal;font-weight:600}
+
+  /* ---------- primary witness sections ---------- */
+  .wit{border:1px solid var(--line);background:#fffdf7;margin:30px 0;box-shadow:0 2px 8px rgba(43,33,24,.07)}
+  .wit-head{display:flex;align-items:baseline;gap:14px;padding:18px 26px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .badge{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--cinnabar);padding:3px 10px;border-radius:3px;white-space:nowrap}
+  .wit-head h3{font-size:21px;font-weight:600;flex:1 1 420px;min-width:0}
+  .wit-head .date{margin-left:auto;background:var(--cinnabar);color:#f6f1e6;font-size:13px;padding:3px 12px;border-radius:20px;white-space:nowrap}
+  .desc{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+  .desc .cn{padding:14px 26px;border-right:1px dashed var(--line);font-family:'Noto Serif SC',serif;font-size:15px}
+  .desc .en{padding:14px 26px;background:var(--paper);font-size:14.5px;font-style:italic;color:var(--ink)}
+
+  /* ---------- aligned text spread ---------- */
+  .tx{width:100%;border-collapse:collapse}
+  .tx th{font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--cinnabar);border-bottom:2px solid var(--cinnabar);padding:10px 14px;text-align:left}
+  .tx td{border-bottom:1px solid #e8dfc8;padding:7px 14px;vertical-align:middle}
+  .tx td.cn-cell{font-family:'Noto Serif SC',serif;font-size:16px;width:50%;border-right:1px dashed var(--line)}
+  .tx td.en-cell{font-size:14.5px;width:50%;color:var(--ink)}
+  .vr{
+    color:var(--cinnabar-deep);font-weight:600;
+    border-bottom:2px solid var(--cinnabar);cursor:help;
+  }
+  .vrnote{font-size:12px;color:var(--cinnabar);font-family:'Crimson Text',serif;font-style:italic}
+  .song-note{font-size:12.5px;color:var(--cinnabar);border-bottom:1px dotted var(--cinnabar)}
+  .src{font-size:12.5px;color:var(--ink-light);font-style:italic;padding:10px 26px 16px;border-top:1px solid var(--line)}
+
+  /* ---------- dating debate ---------- */
+  .debate{border:1px solid var(--gold);background:#fbf7ea;padding:24px 30px;margin:30px 0}
+  .debate h3{color:var(--cinnabar);font-size:19px;margin-bottom:8px}
+  .debate p{font-size:15px}
+  .debate .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:12px}
+  .debate .cols div{background:#fffdf7;border:1px solid var(--line);padding:14px 18px;font-size:14.5px}
+
+  /* ---------- thesis outline (Part III) ---------- */
+  .pagebar{display:flex;height:26px;border:1px solid var(--line);margin:26px 0 8px;overflow:hidden;box-shadow:0 2px 6px rgba(43,33,24,.06)}
+  .pagebar div{display:flex;align-items:center;justify-content:center;color:#f6f1e6;font-size:11px;letter-spacing:.5px;white-space:nowrap;overflow:hidden}
+  .pagebar-cap{text-align:center;font-size:12.5px;color:var(--ink-light);font-style:italic;margin:0 0 6px}
+  .wit-head h3 .zh{display:block;font-size:13px;line-height:1.3;color:var(--ink-light);font-weight:400;margin:2px 0 0}
+  .subs{list-style:none;padding:14px 26px 18px;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 28px}
+  .subs li{font-size:13.5px;line-height:1.5;border-left:2px solid var(--line);padding-left:12px}
+  .subs li b{color:var(--cinnabar)}
+  .subs li .zh{color:var(--ink-light);font-size:12.5px;display:block}
+  @media(max-width:760px){.subs{grid-template-columns:1fr}.pagebar div{font-size:0}}
+
+  /* ---------- map of the scholarship (Part I) ---------- */
+  .map{border:1px solid var(--gold);background:#fbf7ea;margin:26px 0 10px;box-shadow:0 2px 8px rgba(43,33,24,.07)}
+  .map-head{padding:20px 30px 6px}
+  .map-kicker{display:block;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .map-head h3{color:var(--cinnabar);font-size:21px;font-weight:600}
+  .map-lead{padding:8px 30px 10px;font-size:14.5px}
+  .map-lead b{color:var(--cinnabar-deep)}
+  .spine-wrap{padding:2px 30px 8px}
+  .spine{width:100%;border-collapse:collapse}
+  .spine th{font-size:11px;letter-spacing:1.1px;text-transform:uppercase;color:var(--cinnabar);border-bottom:2px solid var(--cinnabar);padding:8px 12px;text-align:left}
+  .spine td{border-bottom:1px solid var(--line);padding:7px 12px;font-size:13.5px;vertical-align:top}
+  .spine td.yr{color:var(--cinnabar);font-weight:600;white-space:nowrap;width:152px}
+  .spine tr:last-child td{border-bottom:none}
+  .map-foot{margin:12px 30px 0;padding:14px 0 22px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-light)}
+  @media(max-width:760px){.spine td.yr{width:auto;white-space:normal}}
+  footer{border-top:3px double var(--cinnabar);margin-top:60px;padding:34px 0 50px;text-align:center;color:var(--ink-light);font-size:13.5px}
+  @media(max-width:760px){.spread,.desc,.debate .cols{grid-template-columns:1fr}.desc .cn,.spread .left{border-right:none;border-bottom:1px dashed var(--line)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="seal zh">蜀道之難</div>
+  <h1>The Genesis of the <em>Shu Road</em></h1>
+  <div class="sub-en">Bibliography &middot; The Four Witnesses &middot; Draft Index</div>
+  <div class="note">How to read this page — Part I opens with a map of the scholarship and then lists the primary and secondary sources. Part II presents each primary witness in three layers: a description card, the <b>actual text as transmitted by that witness</b> (left, in Chinese), and a working English translation (right). Variant readings are underlined in <span class="vr">cinnabar</span> <b>on both sides</b> — the Chinese character and the English word that renders it — so the textual genesis of the poem can be read directly off the page. Part III sets out the draft index, kept strictly to the two perspectives agreed in the meeting.</div>
+</header>
+
+<div class="wrap">
+
+<!-- ================= PART I · BIBLIOGRAPHY ================= -->
+<div class="part">
+  <div class="num">Part I</div>
+  <h2>Bibliography</h2>
+  <div class="rule"></div>
+  <div class="toc-note">Primary sources — every edition, imprint and print of the poem. Secondary sources — every article and study of it. As agreed in the meeting, both lists are <b>alphabetised</b>, with romanised authors, English-translated titles and the Chinese originals beside them, so that each name and title can be verified without reading Chinese. The map below gives the chronological spine that an alphabetical list cannot show; links, where present, are optional pointers only.</div>
+</div>
+
+<!-- ================= MAP OF THE SCHOLARSHIP ================= -->
+<section class="map">
+  <div class="map-head">
+    <span class="map-kicker">A map of the scholarship</span>
+    <h3>One poem, twelve centuries of witnesses</h3>
+  </div>
+  <p class="map-lead">There is <b>no autograph</b> of the poem. What we have instead is a continuous chain of witnesses — a text copied, selected, printed, annotated and collated by many hands — and, alongside it, an unbroken scholarly tradition from 1913 to the present. The two lists that follow are that chain: <b>Primary</b> (every surviving edition, imprint and print) and <b>Secondary</b> (every study of the poem). This is the "map of the scholarship" you asked to see before discussing technique.</p>
+  <div class="spine-wrap">
+  <table class="spine">
+    <tr><th>When</th><th>What survives, or what was written</th></tr>
+    <tr><td class="yr">c. 8th century</td><td>Dunhuang manuscript P.2567 + P.2552 (BnF) — the earliest witness; the poem is titled <i>Gu Shu Dao Nan</i> and differs from the received text in twelve places.</td></tr>
+    <tr><td class="yr">753</td><td>Yin Fan, <i>He Yue Ying Ling Ji</i> — first anthology to include the poem; adjusts nine readings and adds the earliest critical judgement on it.</td></tr>
+    <tr><td class="yr">1080 &rarr; c. 1130</td><td>The 1080 Suzhou edition and the Song Shu print from Meishan — the poem enters the age of print; interlinear "one text reads" notes preserve older readings.</td></tr>
+    <tr><td class="yr">Yuan dynasty</td><td>Yang Qixian &amp; Xiao Shiyun, <i>Fenlei buzhu Li Taibai shi</i> — the first full classified commentary.</td></tr>
+    <tr><td class="yr">1706</td><td><i>Quan Tang Shi</i>, juan 162 — the received text is fixed. Every later edition, and every English translation, descends from it.</td></tr>
+    <tr><td class="yr">1717 &middot; 1758</td><td>Miao Yueqi's facsimile-of-Song print; Wang Qi's annotated edition — the Qing recensions that stabilise the text.</td></tr>
+    <tr><td class="yr">1913 &rarr; 1982</td><td>Luo Zhenyu dates the Dunhuang fragment; Zhan Ying and Yu Xianhao open the modern debate on the poem's date and background.</td></tr>
+    <tr><td class="yr">1980 &rarr; 2015</td><td>Four modern collated editions — Qu &amp; Zhu (1980), An Qi (1990), Zhan Ying (1996), Yu Xianhao (2015).</td></tr>
+    <tr><td class="yr">2000 &rarr; 2025</td><td>Xu Jun transcribes P.2567; Chen Shangjun and Luo Jianxin map the variants and the poem's canonisation.</td></tr>
+  </table>
+  </div>
+  <p class="map-lead"><b>The history of the text, in brief.</b> Li Bai left no manuscript in his own hand; the poem reaches us only through witnesses. A Tang scribe in Dunhuang copied it under the title <i>Gu Shu Dao Nan</i>; in 753 an anthologist printed it in a slightly regularised form; Song and Yuan printers carried it into print while preserving older readings in their collation notes; and the <i>Quan Tang Shi</i> of 1706 fixed the version that all subsequent editions — and all English translations — reproduce. Modern collations and recent studies have since mapped exactly where those witnesses diverge. It is this history — <b>the manuscript tradition against the print tradition, and the many hands of scribes, anthologists, editors and printers</b> — that makes the poem, as you observed, so well suited to a digital scholarly edition.</p>
+  <p class="map-foot">The lists below are alphabetised by romanised author or title, as you asked: pinyin author names, English-translated titles and the Chinese originals are given for every entry, so that each name and title can be checked without reading Chinese. Part II prints all four witnesses in full; Part III is the draft index.</p>
+</section>
+
+<h3 style="text-align:center;color:var(--cinnabar);margin:24px 0 4px;letter-spacing:2px">PRIMARY SOURCES</h3>
+
+<div class="spread"><div class="left zh">安旗主编《李白全集编年注释》，巴蜀书社，1990</div><div class="right"><span class="pinyin">An Qi (ed.), Li Bai quanji bian nian zhu shi</span> — <i>The Complete Works of Li Bai, Annotated and Arranged by Year</i>, 1990.<a class="reflink" href="https://baike.baidu.com/item/李白全集编年注释/57799890" target="_blank" rel="noopener">Encyclopaedia entry · Baidu Baike</a></div></div>
+<div class="spread"><div class="left zh">敦煌写本 P.2567＋P.2552《唐人选唐诗》残卷，法国国家图书馆藏，抄于唐中叶（约 8 世纪）</div><div class="right"><span class="pinyin">Dunhuang xieben P.2567+P.2552</span> — <i>Fragment of a Tang anthology of Tang poetry</i>, BnF; earliest extant witness, copied c. 8th c.<a class="reflink" href="https://gallica.bnf.fr/ark:/12148/btv1b8304029j" target="_blank" rel="noopener">Digitised manuscript · Bibliothèque nationale de France (Gallica)</a></div></div>
+<div class="spread"><div class="left zh">杨齐贤集注、萧士赟补注《分类补注李太白诗》二十五卷，元建安余氏刻（本课题期末项目所用宋刊影印系统）</div><div class="right"><span class="pinyin">Fenlei buzhu Li Taibai shi</span> — <i>Classified and Annotated Poems of Li Taibai</i>, Yuan dynasty Jian'an print, with commentary by Yang Qixian and Xiao Shiyun.<a class="reflink" href="https://ctext.org/library.pl?if=gb&res=94324" target="_blank" rel="noopener">Scanned edition (Harvard-Yenching) · Chinese Text Project</a></div></div>
+<div class="spread"><div class="left zh">缪曰芑《李太白文集》三十卷，清康熙五十六年（1717）影宋刻本</div><div class="right"><span class="pinyin">Miao Yueqi, Li Taibai wenji</span> — <i>The Collected Works of Li Taibai</i>, facsimile-of-Song print, 1717.<a class="reflink" href="https://shuge.org/ebook/li-taibai-wen-ji" target="_blank" rel="noopener">Digitised 1717 facsimile print · Shuge (PDF download)</a></div></div>
+<div class="spread"><div class="left zh">彭定求等编《全唐诗》卷一六二，清康熙四十五年（1706）</div><div class="right"><span class="pinyin">Quan Tang Shi</span> — <i>Complete Tang Poems</i>, juan 162, 1706; the received text.<a class="reflink" href="https://zh.wikisource.org/zh-hans/蜀道難_(李白)" target="_blank" rel="noopener">Full text with variant notes · Wikisource</a></div></div>
+<div class="spread"><div class="left zh">瞿蜕园、朱金城校注《李白集校注》，上海古籍出版社，1980</div><div class="right"><span class="pinyin">Qu Tuiyuan &amp; Zhu Jincheng, Li Bai ji jiao zhu</span> — <i>The Works of Li Bai: Collated and Annotated</i>, Shanghai, 1980.<a class="reflink" href="https://book.douban.com/subject/1714304/" target="_blank" rel="noopener">Book record · Douban Books</a></div></div>
+<div class="spread"><div class="left zh">宋蜀刻本《李太白文集》三十卷，南宋初眉山刻（翻刻 1080 晏知止苏州本）；国家图书馆藏残本、静嘉堂文库藏足本</div><div class="right"><span class="pinyin">Song Shu keben Li Taibai wenji</span> — <i>The Collected Works of Li Taibai</i>, Song print from Meishan, c. 1127–1163, reprinting the 1080 Suzhou edition; NLC fragment, Seikadō complete copy.<a class="reflink" href="https://shuge.org/view/li_tai_bai_wen_ji" target="_blank" rel="noopener">Digitised Song Shu print · Shuge (hi-res scans)</a></div></div>
+<div class="spread"><div class="left zh">王琦注《李太白诗集注》三十六卷，清乾隆二十三年（1758）</div><div class="right"><span class="pinyin">Wang Qi, Li Taibai shiji zhu</span> — <i>The Poems of Li Taibai, Annotated</i>, 1758; the classical annotated edition.<a class="reflink" href="https://ctext.org/library.pl?if=gb&amp;res=94048" target="_blank" rel="noopener">Scanned edition (Harvard-Yenching) · Chinese Text Project</a></div></div>
+<div class="spread"><div class="left zh">殷璠《河岳英灵集》，唐天宝十二载（753）编成</div><div class="right"><span class="pinyin">Yin Fan, He Yue Ying Ling Ji</span> — <i>A Collection of the Spirits of Rivers and Peaks</i>, 753; earliest anthology to record the poem.<a class="reflink" href="https://ctext.org/library.pl?if=gb&res=77646" target="_blank" rel="noopener">Scanned Sibu Congkan edition · Chinese Text Project</a></div></div>
+<div class="spread"><div class="left zh">郁贤皓《李太白全集校注》，凤凰出版社，2015</div><div class="right"><span class="pinyin">Yu Xianhao, Li Taibai quanji jiao zhu</span> — <i>The Complete Works of Li Taibai: Collated and Annotated</i>, 2015.<a class="reflink" href="https://book.douban.com/subject/26702101/" target="_blank" rel="noopener">Book record · Douban Books</a></div></div>
+<div class="spread"><div class="left zh">詹锳主编《李白全集校注汇释集评》，百花文艺出版社，1996</div><div class="right"><span class="pinyin">Zhan Ying (ed.), Li Bai quanji jiao zhu hui shi ji ping</span> — <i>The Complete Works of Li Bai: Collation, Annotation, Collected Exegesis and Evaluation</i>, 1996.<a class="reflink" href="https://book.douban.com/subject/1551936/" target="_blank" rel="noopener">Book record · Douban Books</a></div></div>
+
+<h3 style="text-align:center;color:var(--cinnabar);margin:34px 0 4px;letter-spacing:2px">SECONDARY SOURCES</h3>
+
+<div class="spread"><div class="left zh">陈尚君《唐五代诗全编》，上海古籍出版社，2024（论证敦煌本四十三首李白诗源自早期传本，部分异文或出李白自改）</div><div class="right"><span class="pinyin">Chen Shangjun, Tang Wudai shi quanbian</span> — <i>The Complete Poetry of the Tang and Five Dynasties</i>, 2024; argues the Dunhuang Li Bai poems derive from an early transmission, some variants possibly authorial revisions.<a class="reflink" href="https://book.douban.com/subject/36872340/" target="_blank" rel="noopener">Book record · Douban Books</a></div></div>
+<div class="spread"><div class="left zh">罗建新《李白〈蜀道难〉版本流变与经典生成》，《光明日报》2025 年 6 月 16 日（敦煌本 12 处异文与选本 9 处调整之逐条考订）</div><div class="right"><span class="pinyin">Luo Jianxin, "Li Bai 'Shu Dao Nan' banben liubian yu jingdian shengcheng"</span> — <i>The Textual Transmission and Canonisation of 'Hard Roads in Shu'</i>, Guangming Daily, 16 June 2025; itemised study of the 12 Dunhuang variants and 9 anthology adjustments.<a class="reflink" href="https://gmw.cn/xueshu/2025-06/16/content_38092740.htm" target="_blank" rel="noopener">Full article · Guangming Daily (official site)</a></div></div>
+<div class="spread"><div class="left zh">罗振玉《鸣沙石室佚书》，1913（考订敦煌本唐诗选抄年代）</div><div class="right"><span class="pinyin">Luo Zhenyu, Ming Sha Shi Shi Yi Shu</span> — <i>Lost Books from the Caves of the Singing Sands</i>, 1913; dating of the Dunhuang anthology fragment.<a class="reflink" href="https://www.guoxuedashi.com/SiKuQuanShu/bk104170c/" target="_blank" rel="noopener">Scanned copy and entry · Guoxuedashi</a></div></div>
+<div class="spread"><div class="left zh">徐俊《敦煌诗集残卷辑考》，中华书局，2000（P.2567 录校）</div><div class="right"><span class="pinyin">Xu Jun, Dunhuang shi ji can juan ji kao</span> — <i>Collation and Study of the Fragmentary Poetry Manuscripts from Dunhuang</i>, 2000; critical transcription of P.2567.<a class="reflink" href="https://book.douban.com/subject/1119259/" target="_blank" rel="noopener">Book record · Douban Books</a></div></div>
+<div class="spread"><div class="left zh">郁贤皓《李白丛考》，1982（质疑「讽章仇兼琼」说，考订两入长安）</div><div class="right"><span class="pinyin">Yu Xianhao, Li Bai cong kao</span> — <i>Investigations on Li Bai</i>, 1982; on the poem's background and Li Bai's two stays in Chang'an.<a class="reflink" href="https://www.guoxuedashi.com/shici/bk25436s/" target="_blank" rel="noopener">Book entry · Guoxuedashi</a></div></div>
+<div class="spread"><div class="left zh">詹锳《李白诗论丛》，1957；论《蜀道难》本事与系年诸说</div><div class="right"><span class="pinyin">Zhan Ying, Li Bai shi lun cong</span> — <i>Studies on the Poems of Li Bai</i>, 1957; on the dating debate of <i>Hard Roads in Shu</i>.<a class="reflink" href="https://baike.baidu.com/item/李白诗论丛/15585602" target="_blank" rel="noopener">Encyclopaedia entry · Baidu Baike</a></div></div>
+
+<!-- ================= DATING ================= -->
+<div class="debate">
+  <h3>The dating debate</h3>
+  <p>The dating of the poem is part of the textual problem. Two scholarly positions, to be recorded in the edition as attributed hypotheses (<span class="pinyin">@cert / @resp</span>):</p>
+  <div class="cols">
+    <div><b class="yr">742–744</b> — written during Li Bai's first stay in Chang'an (Yu Xianhao; An Qi). Supported by the He Zizhang anecdote (Meng Qi, <i>Benshi shi</i>).</div>
+    <div><b class="yr">745–746</b> — written around Li Bai's second stay / departure from Chang'an (Zhan Ying's later view and others). Supported by internal allusions and the poem's addressee question.</div>
+  </div>
+</div>
+
+<!-- ================= PART II · THE FOUR WITNESSES ================= -->
+<div class="part">
+  <div class="num">Part II</div>
+  <h2>The Four Witnesses, in Their Own Words</h2>
+  <div class="rule"></div>
+</div>
+
+<!-- ============ PRIMARY 1 · DUNHUANG ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Primary · 1</span>
+    <h3 class="zh">敦煌写本 P.2567（+P.2552）《古蜀道难》</h3>
+    <span class="date">c. 8th century</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">法藏敦煌唐诗选抄残卷，卷中此诗题作<b>《古蜀道难》</b>。现存最早《蜀道难》写本，无名抄手所抄，与通行本有 <b>12 处</b>文辞差异。</div>
+    <div class="en">A Tang anthology fragment among the Dunhuang manuscripts (Pelliot chinois), Bibliothèque nationale de France. The earliest extant witness of the poem — copied by an anonymous scribe, and titled there <i>Gu Shu Dao Nan</i> ("The Old 'Hard Roads of Shu'"). It differs from the received text in <b>12 places</b>.</div>
+  </div>
+  <table class="tx">
+    <tr><th>Dunhuang original text</th><th>Working English translation</th></tr>
+    <tr><td class="cn-cell zh">噫吁嚱，危乎高哉！</td><td class="en-cell">Alas! How steep, how high!</td></tr>
+    <tr><td class="cn-cell zh">蜀道之難，難於上青天！</td><td class="en-cell">The road to Shu is hard — harder than climbing the blue sky.</td></tr>
+    <tr><td class="cn-cell zh">蠶叢及魚鳧，開國何茫然！</td><td class="en-cell">Cancong and Yufu — how dim and remote their founding of the realm!</td></tr>
+    <tr><td class="cn-cell zh">爾來四萬八千歲，<span class="vr" title="通行本无「乃」">乃</span>不與秦塞通人煙。</td><td class="en-cell">Since then forty-eight thousand years — <span class="vr" title="English counterpart of the marked Chinese variant">and never once</span> a path between Qin's frontier and human smoke.</td></tr>
+    <tr><td class="cn-cell zh">西當太白有鳥道，可以橫絕峨眉巔。</td><td class="en-cell">West, on Taibai's peak, only a bird's path — and that could cut across to Emei's summit.</td></tr>
+    <tr><td class="cn-cell zh"><span class="vr" title="通行本作「地崩」">蛇</span>崩山摧壯士死，然後天梯石棧<span class="vr" title="通行本作「相鉤連」">方</span>鉤連。</td><td class="en-cell"><span class="vr" title="English counterpart of the marked Chinese variant">The serpent</span> broke, the mountain crashed, the strong men died — <span class="vr" title="English counterpart of the marked Chinese variant">only then</span> were sky-ladders and plank-paths joined.</td></tr>
+    <tr><td class="cn-cell zh">上有<span class="vr" title="通行本作「六龍回日之高標」">橫河斷海之浮雲</span>，下有<span class="vr" title="通行本作「衝波」">銜波</span>逆折之回川。</td><td class="en-cell">Above, floating clouds that <span class="vr" title="English counterpart of the marked Chinese variant">dam the rivers and sever the seas</span>; below, waves that <span class="vr" title="English counterpart of the marked Chinese variant">clasp and coil</span>, eddying back in the turning stream.</td></tr>
+    <tr><td class="cn-cell zh">黃鶴之飛尚不得過，猿猱欲度愁攀<span class="vr" title="通行本作「攀援／攀緣」">牽</span>。</td><td class="en-cell">Even the yellow crane in flight cannot cross; monkeys that would pass grieve at the clinging <span class="vr" title="English counterpart of the marked Chinese variant">pull</span> of the rocks.</td></tr>
+    <tr><td class="cn-cell zh">青泥何盤盤，百步九折縈巖巒。</td><td class="en-cell">How Qingni coils and coils — a hundred paces, nine turns, winding round the crags.</td></tr>
+    <tr><td class="cn-cell zh">捫參歷井仰脅息，以手撫<span class="vr" title="通行本作「膺」">心</span>坐長嘆。</td><td class="en-cell">Touching the stars of Shen, crossing Jing, gasping toward heaven; hand pressed to <span class="vr" title="English counterpart of the marked Chinese variant">heart</span>, seated in a long sigh.</td></tr>
+    <tr><td class="cn-cell zh">問君西遊何時還？畏途巉巖不可攀。</td><td class="en-cell">I ask you, journeying west — when will you return? The dreaded road, sheer cliffs that none may climb.</td></tr>
+    <tr><td class="cn-cell zh">但見悲鳥號古木，雄飛<span class="vr" title="通行本作「雌從」">從雌</span>繞<span class="vr" title="通行本作「林間」">花間</span>。</td><td class="en-cell">Mournful birds cry in ancient trees: the male flies, the female <span class="vr" title="English counterpart of the marked Chinese variant">follows him</span>, circling <span class="vr" title="English counterpart of the marked Chinese variant">among the blossoms</span>.</td></tr>
+    <tr><td class="cn-cell zh">又聞子規啼<span class="vr" title="通行本作「啼夜月」">月</span>，愁空山。</td><td class="en-cell">And the cuckoo's cry <span class="vr" title="English counterpart of the marked Chinese variant">at the moon</span> — sorrow in the empty hills.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之難，難於上青天，使人聽此凋朱顏！</td><td class="en-cell">The road to Shu is hard, harder than the blue sky — hearing it, the rose drains from the cheek.</td></tr>
+    <tr><td class="cn-cell zh">連峰<span class="vr" title="通行本作「去天不盈尺」">入煙幾千尺</span>，枯松倒挂倚絕壁。</td><td class="en-cell">Linked peaks <span class="vr" title="English counterpart of the marked Chinese variant">sink into the mist, some thousand feet</span>; withered pines hang inverted from sheer walls.</td></tr>
+    <tr><td class="cn-cell zh">飛湍瀑流爭喧豗，砯崖轉石萬壑雷。</td><td class="en-cell">Rushing rapids and cataracts vie in roar; pounding the cliffs, rolling stones — thunder through ten thousand ravines.</td></tr>
+    <tr><td class="cn-cell zh">其險<span class="vr" title="通行本作「其險也如此」">若此</span>，嗟爾遠道之人胡為乎來哉！</td><td class="en-cell"><span class="vr" title="English counterpart of the marked Chinese variant">Such is the peril!</span> Why, traveller from afar, have you come at all?</td></tr>
+    <tr><td class="cn-cell zh">劍閣崢嶸而崔嵬，一夫當關，萬夫莫開。</td><td class="en-cell">The Sword-Gate towers, rugged and vast: one man holds the pass, ten thousand cannot breach it.</td></tr>
+    <tr><td class="cn-cell zh">所守或匪親，化為狼與豺。</td><td class="en-cell">If its keeper is no trusted kin, he turns to wolf and jackal.</td></tr>
+    <tr><td class="cn-cell zh">朝避猛虎，夕避長蛇，磨牙吮血，殺人如麻。</td><td class="en-cell">At dawn flee the fierce tiger, at dusk shun the long serpent — grinding teeth, sucking blood, slaying men like hemp.</td></tr>
+    <tr><td class="cn-cell zh"><span class="vr" title="通行本有「錦城雖云樂，不如早還家」一聯，敦煌本無">（無「錦城雖云樂」一聯）</span>蜀道之難，難於上青天，側身西望<span class="vr" title="通行本作「長咨嗟」">令人嗟</span>！</td><td class="en-cell"><i>(No couplet on Jincheng here — the warning "return home early" does not yet exist.)</i> The road to Shu is hard, harder than the blue sky — I turn, gaze west, <span class="vr" title="English counterpart of the marked Chinese variant">and one sigh rises</span>.</td></tr>
+  </table>
+  <div class="src">Transcription reconstructed from the collation list in Luo Jianxin, <i>Guangming Daily</i>, 16 June 2025 (12 variant points, each verified against the received text); manuscript images: BnF Pelliot chinois 2567 + 2552, also via IDP (International Dunhuang Project). The variant <span class="vrnote">蛇／虵</span> and popular-character forms of the scroll are noted in Luo's study.</div>
+</section>
+
+<!-- ============ PRIMARY 2 · HYLJ ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Primary · 2</span>
+    <h3 class="zh">殷璠《河岳英灵集》卷上</h3>
+    <span class="date">753 · earliest anthology</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">现存最早收录此诗的选本（天宝十二载编成），殷璠并评曰「<b>奇之又奇，自骚人以还，鲜有此体调</b>」。相较敦煌本有 <b>9 处</b>修辞调整，已初见「规范化」意识。</div>
+    <div class="en">The earliest anthology to include the poem, compiled by Yin Fan in 753 — with the first piece of criticism ever attached to it: "marvellous upon marvellous; since the <i>Sao</i> poets, rarely has such a register appeared." Compared with the Dunhuang witness it makes <b>9 rhetorical adjustments</b>: the first visible gesture of editorial normalisation.</div>
+  </div>
+  <table class="tx">
+    <tr><th>Anthology original text (753)</th><th>Working English translation</th></tr>
+    <tr><td class="cn-cell zh">噫吁嚱，危乎髙哉！蜀道之難，難於上青天。</td><td class="en-cell">Alas! How steep, how high! The road to Shu is hard — harder than climbing the blue sky.</td></tr>
+    <tr><td class="cn-cell zh">蠶叢及魚鳬，開國何茫然。爾來四萬八千歲，<span class="vr" title="较敦煌本删「乃」">不</span>與秦塞通人煙。</td><td class="en-cell">Cancong and Yufu — how dim their founding! Since then forty-eight thousand years <span class="vr" title="English counterpart of the marked Chinese variant">without</span> a path between Qin's frontier and human smoke.</td></tr>
+    <tr><td class="cn-cell zh">西當太白有鳥道，可以橫絕峨眉巔。</td><td class="en-cell">West, on Taibai's peak, only a bird's path — and that could cut across to Emei's summit.</td></tr>
+    <tr><td class="cn-cell zh">地崩山摧壯士死，然後天梯石棧<span class="vr" title="敦煌本作「方」">相</span>勾連。</td><td class="en-cell">The earth broke, the mountain crashed, the strong men died — and then sky-ladders and plank-paths <span class="vr" title="English counterpart of the marked Chinese variant">were joined together</span>.</td></tr>
+    <tr><td class="cn-cell zh">上有<span class="vr" title="敦煌本作「橫河斷海之浮雲」">六龍回日之髙標</span>，下有<span class="vr" title="敦煌本作「銜波」">衝波</span>逆折之回川。</td><td class="en-cell">Above, the <span class="vr" title="English counterpart of the marked Chinese variant">high peak where the six dragons wheel the sun back</span>; below, <span class="vr" title="English counterpart of the marked Chinese variant">surging</span> waves eddying back in the turning stream.</td></tr>
+    <tr><td class="cn-cell zh">黃鶴之飛尚不得過，猿猱欲度愁攀<span class="vr" title="敦煌本作「牽」">縁</span>。</td><td class="en-cell">Even the yellow crane cannot cross; monkeys that would pass grieve at the <span class="vr" title="English counterpart of the marked Chinese variant">clambering</span>.</td></tr>
+    <tr><td class="cn-cell zh">青泥何盤盤，百步九折縈巖巒。</td><td class="en-cell">How Qingni coils and coils — a hundred paces, nine turns, winding round the crags.</td></tr>
+    <tr><td class="cn-cell zh">捫參歷井仰脅息，以手<span class="vr" title="敦煌本作「心」">拊膺</span>坐長歎。</td><td class="en-cell">Touching the stars of Shen, crossing Jing, gasping toward heaven; hand pressed to <span class="vr" title="English counterpart of the marked Chinese variant">breast</span>, seated in a long sigh.</td></tr>
+    <tr><td class="cn-cell zh">問君西游何時還，畏途巉嵓不可攀。</td><td class="en-cell">I ask you, journeying west — when will you return? The dreaded road, sheer cliffs that none may climb.</td></tr>
+    <tr><td class="cn-cell zh">但見悲鳥號古木，雄飛<span class="vr" title="敦煌本作「從雌繞花間」">雌從繞林間</span>。</td><td class="en-cell">Mournful birds cry in ancient trees: the male flies, the female follows, <span class="vr" title="English counterpart of the marked Chinese variant">circling through the forest</span>.</td></tr>
+    <tr><td class="cn-cell zh">又聞子規啼<span class="vr" title="敦煌本连读「啼月」；此本断作「啼，夜月愁空山」">，夜月</span>愁空山。</td><td class="en-cell">And hear the cuckoo crying — <span class="vr" title="English counterpart of the marked Chinese variant">in the night moon</span>, sorrow in the empty hills.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之難，難於上青天。使人聽此<span class="vrnote">彫</span>朱顏，連峰<span class="vr" title="敦煌本作「入煙幾千尺」">去天不盈尺</span>，枯松倒挂倚絕壁，</td><td class="en-cell">Hearing it, the rose drains from the cheek. Linked peaks <span class="vr" title="English counterpart of the marked Chinese variant">stand less than a foot from the sky</span>; withered pines hang inverted from sheer walls.</td></tr>
+    <tr><td class="cn-cell zh">飛湍瀑流爭喧豗，砯崖轉石萬壑雷。</td><td class="en-cell">Rushing rapids and cataracts vie in roar; pounding the cliffs, rolling stones — thunder through ten thousand ravines.</td></tr>
+    <tr><td class="cn-cell zh">其險也<span class="vr" title="敦煌本无「也」">若此</span>，嗟爾逺道之人胡為乎來哉。</td><td class="en-cell"><span class="vr" title="English counterpart of the marked Chinese variant">Such, indeed, is the peril!</span> Why, traveller from afar, have you come at all?</td></tr>
+    <tr><td class="cn-cell zh">劍閣崢嶸而崔嵬，一夫當闗，<span class="vrnote">萬人</span>莫開。</td><td class="en-cell">The Sword-Gate towers, rugged and vast: one man holds the pass, ten thousand men cannot breach it.</td></tr>
+    <tr><td class="cn-cell zh">所守或匪親，化為狼與豺。朝避猛虎，夕避長蛇，磨牙吮血，殺人如麻。</td><td class="en-cell">If its keeper is no trusted kin, he turns to wolf and jackal. At dawn flee the tiger, at dusk shun the serpent — grinding teeth, sucking blood, slaying men like hemp.</td></tr>
+    <tr><td class="cn-cell zh"><span class="vr" title="敦煌本无此联；此本首次增入">錦城雖云樂，不如早還家。</span></td><td class="en-cell"><span class="vr" title="English counterpart of the marked Chinese variant">Though Jincheng is merry, better to return home early</span> — the couplet appears here for the first time.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之難，難於上青天，側身西望長咨嗟。</td><td class="en-cell">The road to Shu is hard, harder than the blue sky — I turn, gaze west, and heave a long, deep sigh.</td></tr>
+  </table>
+  <div class="src">Transcribed from the <i>He Yue Ying Ling Ji</i> text at the Chinese Text Project (ctext.org, Wiki recension); individual printed editions of the anthology vary slightly in isolated characters. The 9 adjustments relative to the Dunhuang witness follow the list in Luo Jianxin, <i>Guangming Daily</i>, 2025.</div>
+</section>
+
+<!-- ============ PRIMARY 3 · SONG ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Primary · 3</span>
+    <h3 class="zh">宋蜀刻本《李太白文集》卷三（南宋初眉山刻）</h3>
+    <span class="date">c. 1127–1163</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">宋蜀刻本翻刻自元丰三年（1080）晏知止苏州本，双行小注中保留大量「<b>一作</b>」异文——<b>注意红字小注：敦煌本的读法在这里被宋本校注原样保存</b>。今国图藏残本（配缪曰芑本）、日本静嘉堂文库藏足本。</div>
+    <div class="en">The Song printed edition from Meishan, Sichuan, itself a reprint of the 1080 Suzhou edition. Its interlinear collation notes (<span class="song-note">"one text reads…"</span>, shown in cinnabar below) <b>preserve several Dunhuang-era readings inside the printed apparatus</b> — the transmissional layers, already visible in the Song edition itself. Surviving copies: National Library of China (fragment) and the Seikadō Bunko, Japan (complete).</div>
+  </div>
+  <table class="tx">
+    <tr><th>Song edition original text</th><th>Working English translation</th></tr>
+    <tr><td class="cn-cell zh"><span class="vrnote">噫吁戏</span>危乎高哉，蜀道之难难于上青天！</td><td class="en-cell">Alas! How steep, how high! The road to Shu is hard — harder than climbing the blue sky.</td></tr>
+    <tr><td class="cn-cell zh">蚕丛及鱼凫，开国何茫然。尔来四万八千岁，不<span class="song-note">（一作乃）</span>与秦塞通人烟。</td><td class="en-cell">Cancong and Yufu — how dim their founding! Forty-eight thousand years without a path between Qin and human smoke. <i>[The note preserves the Dunhuang reading </i><span class="vr" title="English counterpart of the marked Chinese variant">"never once"</span><i>.]</i></td></tr>
+    <tr><td class="cn-cell zh">西当太白有鸟道，何<span class="song-note">（一作可）</span>以横绝峨眉颠。</td><td class="en-cell">West, on Taibai's peak, only a bird's path — how could it cut across to Emei's summit? <i>[Or, with the note: </i><span class="vr" title="English counterpart of the marked Chinese variant">"and that could"</span><i>.]</i></td></tr>
+    <tr><td class="cn-cell zh">地崩山摧壮士死，然后天梯石栈方<span class="song-note">（一作相）</span>钩连。</td><td class="en-cell">The earth broke, the mountain crashed, the strong men died — <span class="vr" title="English counterpart of the marked Chinese variant">"only then"</span> were sky-ladders and plank-paths joined. <i>[The main text still keeps the Dunhuang reading; the note records the received one.]</i></td></tr>
+    <tr><td class="cn-cell zh">上有六龙回日之高标<span class="song-note">（一作横河断海之浮云）</span>，下有冲波逆折之回川。</td><td class="en-cell">Above, the high peak where the six dragons wheel the sun back; below, surging waves eddying in the turning stream. <i>[The note preserves the Dunhuang image of </i><span class="vr" title="English counterpart of the marked Chinese variant">the cloud that dams rivers and severs seas</span><i>.]</i></td></tr>
+    <tr><td class="cn-cell zh">黄鹤之飞尚不得过，猿猱欲度愁攀缘<span class="song-note">（一作牵）</span>。</td><td class="en-cell">Even the yellow crane cannot cross; monkeys grieve at the clambering. <i>[The note preserves the Dunhuang </i><span class="vr" title="English counterpart of the marked Chinese variant">"clinging pull"</span><i>.]</i></td></tr>
+    <tr><td class="cn-cell zh">青泥何盘盘，百步九折萦岩峦。扪参历井仰胁息，以手抚膺坐长叹。</td><td class="en-cell">How Qingni coils and coils — a hundred paces, nine turns. Touching Shen, crossing Jing, gasping toward heaven; hand pressed to breast, seated in a long sigh.</td></tr>
+    <tr><td class="cn-cell zh">问君西游何时还？畏途巉岩不可攀。但见悲鸟号古木，雄飞雌从绕林间。又闻子规啼夜月，愁空山。</td><td class="en-cell">I ask you, journeying west — when will you return? Mournful birds cry in ancient trees; the male flies, the female follows, circling through the forest. And the cuckoo crying in the night moon — sorrow in the empty hills.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之难难于上青天，使人听此凋朱颜！连峰去天不盈尺<span class="song-note">（一作入烟几千尺）</span>，枯松倒挂倚绝壁。</td><td class="en-cell">Hearing it, the rose drains from the cheek. Linked peaks stand less than a foot from the sky <i>[the note preserves </i><span class="vr" title="English counterpart of the marked Chinese variant">"sink into the mist, some thousand feet"</span><i>]</i>; withered pines hang inverted from sheer walls.</td></tr>
+    <tr><td class="cn-cell zh">飞湍瀑流争喧豗，砯崖转石万壑雷。其险也如此，嗟尔远道之人胡为乎来哉。</td><td class="en-cell">Rushing rapids and cataracts vie in roar; pounding cliffs roll stones — thunder in ten thousand ravines. Such, indeed, is the peril! Why, traveller from afar, have you come at all?</td></tr>
+    <tr><td class="cn-cell zh">剑阁峥嵘而崔嵬，一夫当关，万人<span class="song-note">（一作夫）</span>莫开。所守或匪亲<span class="song-note">（一作人）</span>，化为狼与豺。</td><td class="en-cell">The Sword-Gate towers: one man holds the pass, <span class="vr" title="English counterpart of the marked Chinese variant">ten thousand men</span> cannot breach it. If its keeper is no <span class="vr" title="English counterpart of the marked Chinese variant">trusted kin</span>, he turns to wolf and jackal. <i>[The two notes record "ten thousand men" and "no trusted man" as variant readings.]</i></td></tr>
+    <tr><td class="cn-cell zh">朝避猛虎，夕避长蛇。磨牙吮血，杀人如麻。锦城虽云乐，不如早还家。</td><td class="en-cell">At dawn flee the tiger, at dusk shun the serpent — grinding teeth, sucking blood, slaying men like hemp. Though Jincheng is merry, better to return home early.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之难难于上青天，侧身西望长咨嗟<span class="song-note">（一作令人嗟）</span>。</td><td class="en-cell">The road to Shu is hard, harder than the blue sky — I turn, gaze west, and heave a long, deep sigh. <i>[The note preserves the Dunhuang ending, </i><span class="vr" title="English counterpart of the marked Chinese variant">"and one sigh rises"</span><i>.]</i></td></tr>
+  </table>
+  <div class="src">Transcribed from <i>Song ben Li Taibai wenji</i>, juan 3, as reproduced by the Dangtu County government site (dangtu.gov.cn, official Li Bai corpus pages); the interlinear "one text reads" notes are quoted verbatim. On the descent of the Meishan reprint from the 1080 Suzhou edition, and the surviving copies, see the National Library of China's published account.</div>
+</section>
+
+<!-- ============ PRIMARY 4 · RECEIVED ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Primary · 4</span>
+    <h3 class="zh">通行本（《全唐诗》卷一六二系统）</h3>
+    <span class="date">received text</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">明清以降的「定本」，一切通行选本与<b>一切英译者所依据的底本</b>。与敦煌本对读，可见十二处差异如何塑造了英文读者收到的《蜀道难》。</div>
+    <div class="en">The received text — the "definitive" version stabilised in Ming–Qing printings (here following <i>Quan Tang Shi</i>, juan 162). This is the <b>base text used by every English translator</b>: what the English reader receives is this witness, not the others. Read its cinnabar marks against Primary 1 and the twelve divergences appear at a glance.</div>
+  </div>
+  <table class="tx">
+    <tr><th>Received text original</th><th>Working English translation</th></tr>
+    <tr><td class="cn-cell zh">噫吁嚱，危乎高哉！蜀道之难，难于上青天！</td><td class="en-cell">Alas! How steep, how high! The road to Shu is hard — harder than climbing the blue sky.</td></tr>
+    <tr><td class="cn-cell zh">蚕丛及鱼凫，开国何茫然！尔来四万八千岁，<span class="vr" title="敦煌本作「乃不与」">不</span>与秦塞通人烟。</td><td class="en-cell">Cancong and Yufu — how dim their founding! Forty-eight thousand years <span class="vr" title="English counterpart of the marked Chinese variant">without</span> a path between Qin's frontier and human smoke.</td></tr>
+    <tr><td class="cn-cell zh">西当太白有鸟道，可以横绝峨眉巅。</td><td class="en-cell">West, on Taibai's peak, only a bird's path — and that could cut across to Emei's summit.</td></tr>
+    <tr><td class="cn-cell zh"><span class="vr" title="敦煌本作「蛇崩」">地</span>崩山摧壮士死，然后天梯石栈<span class="vr" title="敦煌本作「方钩连」">相</span>钩连。</td><td class="en-cell"><span class="vr" title="English counterpart of the marked Chinese variant">The earth</span> broke, the mountain crashed, the strong men died — and then sky-ladders and plank-paths <span class="vr" title="English counterpart of the marked Chinese variant">were joined together</span>.</td></tr>
+    <tr><td class="cn-cell zh">上有<span class="vr" title="敦煌本作「横河断海之浮云」">六龙回日之高标</span>，下有<span class="vr" title="敦煌本作「衔波」">冲波</span>逆折之回川。</td><td class="en-cell">Above, the <span class="vr" title="English counterpart of the marked Chinese variant">high peak where the six dragons wheel the sun back</span>; below, <span class="vr" title="English counterpart of the marked Chinese variant">surging</span> waves eddying in the turning stream.</td></tr>
+    <tr><td class="cn-cell zh">黄鹤之飞尚不得过，猿猱欲度愁攀<span class="vr" title="敦煌本作「牵」">援</span>。</td><td class="en-cell">Even the yellow crane cannot cross; monkeys that would pass grieve at the <span class="vr" title="English counterpart of the marked Chinese variant">clambering</span>.</td></tr>
+    <tr><td class="cn-cell zh">青泥何盘盘，百步九折萦岩峦。扪参历井仰胁息，以手抚<span class="vr" title="敦煌本作「心」">膺</span>坐长叹。</td><td class="en-cell">How Qingni coils — a hundred paces, nine turns. Touching Shen, crossing Jing, gasping toward heaven; hand pressed to <span class="vr" title="English counterpart of the marked Chinese variant">breast</span>, seated in a long sigh.</td></tr>
+    <tr><td class="cn-cell zh">问君西游何时还？畏途巉岩不可攀。但见悲鸟号古木，雄飞<span class="vr" title="敦煌本作「从雌」">雌从</span>绕<span class="vr" title="敦煌本作「花间」">林间</span>。</td><td class="en-cell">I ask you, journeying west — when will you return? Mournful birds cry in ancient trees; the male flies, the female <span class="vr" title="English counterpart of the marked Chinese variant">follows</span>, <span class="vr" title="English counterpart of the marked Chinese variant">circling through the forest</span>.</td></tr>
+    <tr><td class="cn-cell zh">又闻子规啼<span class="vr" title="敦煌本作「啼月」">夜月</span>，愁空山。</td><td class="en-cell">And the cuckoo crying <span class="vr" title="English counterpart of the marked Chinese variant">in the night moon</span> — sorrow in the empty hills.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之难，难于上青天，使人听此凋朱颜！连峰<span class="vr" title="敦煌本作「入烟几千尺」">去天不盈尺</span>，枯松倒挂倚绝壁。</td><td class="en-cell">Hearing it, the rose drains from the cheek. Linked peaks stand <span class="vr" title="English counterpart of the marked Chinese variant">less than a foot from the sky</span>; withered pines hang inverted from sheer walls.</td></tr>
+    <tr><td class="cn-cell zh">飞湍瀑流争喧豗，砯崖转石万壑雷。其险也<span class="vr" title="敦煌本作「其险若此」">如此</span>，嗟尔远道之人胡为乎来哉！</td><td class="en-cell">Rushing rapids and cataracts vie in roar; pounding cliffs roll stones — thunder in ten thousand ravines. <span class="vr" title="English counterpart of the marked Chinese variant">Such, indeed, is the peril!</span> Why, traveller from afar, have you come at all?</td></tr>
+    <tr><td class="cn-cell zh">剑阁峥嵘而崔嵬，一夫当关，万<span class="vr" title="敦煌本、《河岳英灵集》及宋本作「万人」">夫</span>莫开。所守或匪亲，化为狼与豺。</td><td class="en-cell">The Sword-Gate towers: one man holds the pass, <span class="vr" title="English counterpart of the marked Chinese variant">ten thousand</span> cannot breach it. If its keeper is no trusted kin, he turns to wolf and jackal.</td></tr>
+    <tr><td class="cn-cell zh">朝避猛虎，夕避长蛇。磨牙吮血，杀人如麻。<span class="vr" title="敦煌本无此联">锦城虽云乐，不如早还家。</span></td><td class="en-cell">At dawn flee the tiger, at dusk shun the serpent — grinding teeth, sucking blood, slaying men like hemp. <span class="vr" title="English counterpart of the marked Chinese variant">Though Jincheng is merry, better to return home early</span> — the couplet every English reader knows, unknown to the Dunhuang scribe.</td></tr>
+    <tr><td class="cn-cell zh">蜀道之难，难于上青天，侧身西望<span class="vr" title="敦煌本作「令人嗟」">长咨嗟</span>！</td><td class="en-cell">The road to Shu is hard, harder than the blue sky — I turn, gaze west, and heave <span class="vr" title="English counterpart of the marked Chinese variant">a long, deep sigh</span>.</td></tr>
+  </table>
+  <div class="src">Following <i>Quan Tang Shi</i>, juan 162 (Wikisource transcription; the poem is in the public domain). Every English translation of the poem — Obata 1922 onward — is made from a text of this lineage. That observation is the seed of the thesis: the English reader receives the <i>result</i> of a transmission that this edition will make visible.</div>
+</section>
+
+<!-- ================= PART III · THESIS OUTLINE ================= -->
+<div class="part">
+  <div class="num">Part III</div>
+  <h2>Index of the Thesis — Two Perspectives</h2>
+  <div class="rule"></div>
+  <div class="toc-note">A draft index, for you to correct before I begin writing. It follows the traditional long form you recommended — an introduction, three chapters, a bibliography and a companion website, c. 120 pages — and is built on the <b>two perspectives</b> you proposed: <b>the life of the text</b> (Timeline A) and <b>the content of the text</b> (Timeline B), with named-entity markup (persName / placeName). It is deliberately restrained: <i>"Be careful not to put too many things inside."</i></div>
+</div>
+
+<section class="map">
+  <div class="map-head">
+    <span class="map-kicker">As agreed in the meeting &middot; 13 November</span>
+    <h3>What you proposed, and where it goes</h3>
+  </div>
+  <div class="spine-wrap">
+  <table class="spine">
+    <tr><th>Your point</th><th>Where it is worked out</th></tr>
+    <tr><td style="width:50%;color:var(--cinnabar-deep);font-weight:600">Two perspectives / two timelines — "the perspective of the life of the text, and the perspective of the content of the text"</td><td>Chapters 1 and 2 — the backbone of the whole index</td></tr>
+    <tr><td style="color:var(--cinnabar-deep);font-weight:600">The historical dimension: manuscript tradition vs print tradition, and the "many hands" (scribes, anthologists, editors)</td><td>Chapter 1 (Timeline A)</td></tr>
+    <tr><td style="color:var(--cinnabar-deep);font-weight:600">Entity markup: persName / placeName</td><td>Chapters 2 and 3</td></tr>
+    <tr><td style="color:var(--cinnabar-deep);font-weight:600">A companion website, since the project is itself a website</td><td>Chapter 3, and the website delivered with the thesis</td></tr>
+    <tr><td style="color:var(--cinnabar-deep);font-weight:600">"Be careful not to put too many things inside"</td><td>Three chapters only; no further line of enquiry is opened</td></tr>
+  </table>
+  </div>
+</section>
+
+<div class="pagebar">
+  <div style="width:10%;background:#8a7c66">Intro</div>
+  <div style="width:28%;background:var(--cinnabar)">Ch 1 &middot; A &middot; Life of the text</div>
+  <div style="width:25%;background:var(--cinnabar)">Ch 2 &middot; B &middot; Content of the text</div>
+  <div style="width:20%;background:#6b5d4a">Ch 3 &middot; Edition</div>
+  <div style="width:6%;background:#4a3f30">Concl.</div>
+  <div style="width:11%;background:#cbb887;color:var(--ink)">Bib. &amp; app.</div>
+</div>
+<p class="pagebar-cap">Planned allocation, c. 120 pages — the two cinnabar blocks are the two perspectives you gave</p>
+
+<!-- ============ INTRODUCTION ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Front matter</span>
+    <h3>Introduction — One Poem, Two Perspectives<span class="zh">导言：一首诗，两个视角</span></h3>
+    <span class="date">c. 12 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">界定研究对象：一首没有作者手稿传世的唐诗；说明问题在于文本如何在传承中被塑造，而非作者如何亲笔修改。把您在会上给出的两个视角确立为全篇的组织原则，交代材料（四个见证、书目）、方法与结构，并写明本论文刻意不做什么。</div>
+    <div class="en">The object (a Tang poem with no autograph) and the question (how a text is shaped in transmission, not how an author revised his own draft). The two perspectives proposed in the meeting become the organising principle of the whole thesis; materials, method and structure follow, together with an explicit statement of what this thesis deliberately does not attempt.</div>
+  </div>
+  <ul class="subs">
+    <li><b>0.1</b> The object: one poem, four witnesses, no autograph<span class="zh">研究对象：一首诗、四个见证、无亲笔稿</span></li>
+    <li><b>0.2</b> The question: the shaping of a text in transmission<span class="zh">研究问题：文本如何在传承中被塑造</span></li>
+    <li><b>0.3</b> The two perspectives as the organising principle<span class="zh">两个视角作为全篇组织原则</span></li>
+    <li><b>0.4</b> Materials: the four witnesses and the bibliography<span class="zh">材料：四个见证与参考书目（本页 Part I–II）</span></li>
+    <li><b>0.5</b> Structure of the thesis; scope and restraint<span class="zh">论文结构；范围与克制</span></li>
+  </ul>
+</section>
+
+<!-- ============ CH 1 · PERSPECTIVE A ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge" style="background:var(--cinnabar)">Chapter 1 &middot; Perspective A</span>
+    <h3>The Life of the Text — Timeline A<span class="zh">维度一 &middot; 文本的生平：时间线 A</span></h3>
+    <span class="date">c. 34 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">第一个视角：<b>这首诗何时被写出、何时出版、如何传播</b>。本章只做这一件事——把文本的生平铺成一条时间线：从唐写本、唐人选本，到宋刻、元注、清定本。讲清<b>手稿传统与印刷传统</b>之别，以及传承链上「<b>多手</b>」（抄手、选家、编者、刻工）如何各自留下痕迹；四个见证就是这条链上的四个站点。底本的取舍与系年之争，只作为这条生平的起点问题在此交代，不另立专题。</div>
+    <div class="en">The first perspective, in your words: <b>when the poem was written, published, and how it travelled</b>. This chapter does one thing — it lays out that life as a timeline, from the Tang manuscript and the Tang anthology, through the Song print and the Yuan commentary, to the received text fixed in the Qing. It sets the <b>manuscript tradition against the print tradition</b> and follows the "<b>many hands</b>" — scribes, anthologists, editors, printers — that leave their mark along the chain. The four witnesses are its four stations. The choice of a base text and the dating question are treated only as the opening problem of this life, not expanded into separate enquiries.</div>
+  </div>
+  <ul class="subs">
+    <li><b>1.1</b> Timeline A: from composition to the received text<span class="zh">时间线 A：从创作到定本（何时写出、出版、传播）</span></li>
+    <li><b>1.2</b> Manuscript tradition and print tradition<span class="zh">手稿传统与印刷传统</span></li>
+    <li><b>1.3</b> The "many hands": scribes, anthologists, editors, printers<span class="zh">传承链上的「多手」</span></li>
+    <li><b>1.4</b> The four witnesses as stations along the chain<span class="zh">四个见证：传承链上的四个站点（见 Part II）</span></li>
+    <li><b>1.5</b> The base text and the dating question: the two questions you raised<span class="zh">底本与系年：会上提出的两问（为何以通行本为底本；中文校勘本是否兼具批判文本与校记）</span></li>
+  </ul>
+</section>
+
+<!-- ============ CH 2 · PERSPECTIVE B ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge" style="background:var(--cinnabar)">Chapter 2 &middot; Perspective B</span>
+    <h3>The Content of the Text — Timeline B<span class="zh">维度二 &middot; 文本内容的时间：时间线 B</span></h3>
+    <span class="date">c. 28 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">第二个视角：<b>诗中所写蜀道之旅的时间</b>。时间线 B 处理神话时间（「四万八千岁」）、历史时间与朝暮循环（「朝避猛虎，夕避长蛇」），以及三叠「蜀道之难」与「问君西游何时还」构成的时间结构。按她的建议标注<b>人名</b>（persName：蚕丛、鱼凫、五丁）与<b>地名</b>（placeName：太白、峨眉、青泥、剑阁、锦城、秦塞）。末节让两个视角交汇——作品自身的生平，与作品所写世界的时间并置，正是她说的「让读者理解作品与作品所写世界的关系」。</div>
+    <div class="en">The second perspective: <b>the time of the journey the poem narrates</b>. Timeline B treats mythic time ("forty-eight thousand years"), historical time and the diurnal round ("at dawn flee the tiger, at dusk shun the serpent"), and the temporal structure built by the three refrains and "when will you return?". Persons and places are marked up as you suggested — <b>persName</b> (Cancong, Yufu, the five strong men) and <b>placeName</b> (Taibai, Emei, Qingni, Jian'ge, Jincheng, Qin). A final section sets the two perspectives side by side: the work's own life beside the time of the world it writes — your point that the two let the reader understand the relation between the work and the world it writes.</div>
+  </div>
+  <ul class="subs">
+    <li><b>2.1</b> Timeline B: the time of the journey narrated in the poem<span class="zh">时间线 B：诗中蜀道之旅的时间</span></li>
+    <li><b>2.2</b> Mythic, historical and diurnal time<span class="zh">神话时间、历史时间与朝暮循环</span></li>
+    <li><b>2.3</b> The three refrains and "when will you return?"<span class="zh">三叠「蜀道之难」与「问君西游何时还」</span></li>
+    <li><b>2.4</b> Named entities I — persName<span class="zh">实体标注一：人名</span></li>
+    <li><b>2.5</b> Named entities II — placeName<span class="zh">实体标注二：地名</span></li>
+    <li><b>2.6</b> Where the two perspectives meet: the work and the world it writes<span class="zh">两个视角的交汇：作品与其所写世界</span></li>
+  </ul>
+</section>
+
+<!-- ============ CH 3 · THE EDITION ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Chapter 3</span>
+    <h3>The Edition — Making the Two Perspectives Readable<span class="zh">数字版本：把两个视角落成可读的版本</span></h3>
+    <span class="date">c. 24 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">把两个视角落成一份可用的数字版本：一份 TEI 数据源容纳四个见证；两条时间线各自编码；人名与地名挂回 authority 表；每条判断注明依据与归属（@cert / @resp）。<b>配套网站</b>（您推荐的传统式论文附网站，因项目本身即网站）由这一份源生成写本影像、四证人对读与两条时间线视图，并附编辑声明与转录原则。本章只交代方法，不再开新的研究线。</div>
+    <div class="en">Turning the two perspectives into a workable digital edition: one TEI source holding the four witnesses; each timeline encoded in its own right; persons and places linked to authority lists; every judgement attributed to its evidence and its author (@cert / @resp). The <b>companion website</b> you recommended — since the project is itself a website — is generated from that single source: manuscript images, the four-witness collation and the two timeline views, with editorial declarations and transcription rules. This chapter sets out method only and opens no further line of enquiry.</div>
+  </div>
+  <ul class="subs">
+    <li><b>3.1</b> One TEI source for the four witnesses<span class="zh">一份 TEI 源容纳四个见证</span></li>
+    <li><b>3.2</b> Encoding Timeline A and Timeline B<span class="zh">两条时间线的编码</span></li>
+    <li><b>3.3</b> Entity markup: persName / placeName and authority lists<span class="zh">实体标注与 authority 表</span></li>
+    <li><b>3.4</b> Attributed hypotheses: @cert / @resp<span class="zh">归因假说：@cert / @resp</span></li>
+    <li><b>3.5</b> The companion website and the editorial declarations<span class="zh">配套网站与编辑声明</span></li>
+  </ul>
+</section>
+
+<!-- ============ CONCLUSION ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Conclusion</span>
+    <h3>Conclusions — Two Perspectives, One Text<span class="zh">结论：两个视角，一首诗</span></h3>
+    <span class="date">c. 6 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">回到研究问题：两条时间线并置后，一首无作者手稿的诗，其传承史如何变得可读。说明每条标注皆可归因。</div>
+    <div class="en">Back to the question: what becomes readable when the two timelines are set side by side for a poem with no autograph. Every mark is attributable.</div>
+  </div>
+  <ul class="subs">
+    <li><b>4.1</b> What the two timelines make readable<span class="zh">两条时间线让什么变得可读</span></li>
+    <li><b>4.2</b> Every mark attributable<span class="zh">每条标注皆可归因</span></li>
+  </ul>
+</section>
+
+<!-- ============ BIBLIOGRAPHY & APPENDICES ============ -->
+<section class="wit">
+  <div class="wit-head">
+    <span class="badge">Back matter</span>
+    <h3>Bibliography &amp; Appendices<span class="zh">参考书目与附录</span></h3>
+    <span class="date">c. 8 pages</span>
+  </div>
+  <div class="desc">
+    <div class="cn zh">按您在会上给出的格式：分 <b>Primary</b>（《蜀道难》所有版本／刻本／印本）与 <b>Secondary</b>（所有研究这篇诗的论文文章）两部分，<b>按字母排序</b>，作者用拼音、标题给英译并附中文原题——您读不了中文，须据此核对作者与标题。<b>本页 Part I 即其雏形</b>。附录收四证人完整校勘表、人名／地名 authority 表与两条时间线的数据表。</div>
+    <div class="en">In the format set out in the meeting: <b>Primary</b> (all editions, imprints and prints of the poem) and <b>Secondary</b> (all articles and studies on it), <b>alphabetised</b>, with romanised authors, English-translated titles and the Chinese originals — so that, unable to read Chinese, you can still verify authors and titles. <b>Part I of this page is its first draft.</b> Appendices carry the full four-witness collation tables, the person and place authority lists, and the datasets of the two timelines.</div>
+  </div>
+  <ul class="subs">
+    <li><b>A</b> Bibliography — Primary / Secondary, alphabetical, romanised + translated + original titles<span class="zh">参考书目：两部分、字母排序、拼音＋英译＋中文原题</span></li>
+    <li><b>B</b> Full collation tables of the four witnesses<span class="zh">四证人完整校勘表</span></li>
+    <li><b>C</b> Authority lists: persons and places<span class="zh">人名／地名 authority 表</span></li>
+    <li><b>D</b> Timeline A and Timeline B datasets<span class="zh">两条时间线的数据表</span></li>
+  </ul>
+</section>
+
+</div><!-- /wrap -->
+
+<footer>
+  Prepared by LIAN Yuming · DHDK, University of Bologna · for the discussion of <i>The Genesis of the Shu Road</i>
+</footer>
+
+</body>
+</html>
